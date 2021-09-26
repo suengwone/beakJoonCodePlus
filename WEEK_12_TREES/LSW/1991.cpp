@@ -16,12 +16,6 @@ private:
 public:
 	Node() : value(NULL), left(nullptr), right(nullptr), root(nullptr) {};
 	Node(char _value) : value(_value), left(nullptr), right(nullptr), root(nullptr) {};
-	Node(char _value, Node* _left, Node* _right) : value(_value), left(_left), right(_right), root(nullptr) {
-		if (nullptr != _left)
-			_left->root = this;
-		if (nullptr != _right)
-			_right->root = this;
-	};
 
 	~Node() {};
 
