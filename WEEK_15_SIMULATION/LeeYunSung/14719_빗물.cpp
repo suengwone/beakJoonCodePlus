@@ -20,17 +20,17 @@ int main() {
 			//현재 위치에서 왼쪽 탐색하기
 			for (int j = i - 1; j >= 0; j--) {
 				if (v[j] > v[i]) {
-					leftBlock = max(leftBlock, v[j] - v[i]);//3
+					leftBlock = max(leftBlock, v[j] - v[i]);
 				}
 			}
 			//현재 위치에서 오른쪽 탐색하기
 			for (int j = i + 1; j < width; j++) {
 				if (v[j] > v[i]) {
-					rightBlock = max(rightBlock, v[j] - v[i]);//4
+					rightBlock = max(rightBlock, v[j] - v[i]);
 				}
 			}
 			if (leftBlock != 0 && rightBlock != 0) {
-				rain += min(leftBlock, rightBlock);//3
+				rain += min(leftBlock, rightBlock);
 			}
 		}
 	}
